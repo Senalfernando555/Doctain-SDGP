@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="AdminPage.css">
+
+    <script src="AdminPage.js"></script>
+    <script
+    src="https://kit.fontawesome.com/10446019b7.js"
+    crossorigin="anonymous"
+></script>
+</head>
+<body>
+    <nav>
+        <ul>
+        <div>
+        <li><img src="logo.png" style="height: 80px" alt=""></li>
+        </div>
+        <div>
+        <li><a class="active" href="#home">DASHBOARD</a></li>
+        <li><a href="#">ADD DISEASE</a></li>
+        <li><a href="AddDoctor.html">ADD DOCTOR</a></li>
+        </div>
+        <div>
+        <li><a href="#" class="reg-button">LOGOUT</a></li>
+        <li><a href="#"><i class="fa-solid fa-gear"></i></a></li>
+        </div>
+        </ul>
+    </nav>
+
+    <div class="firstBlock">
+        <div class="adminProfile">
+            <div class="circle">
+            <img src="admin.png" alt="adminPicture" style="height:6vh; width:3vw;">
+            </div>
+        </div>
+
+        <div class="firstBlockHead">
+            <h2>Hello Admin</h2>
+            <h4>Welcome Back!</h4>
+        </div>
+        <div class="searchbar" >
+            <input type="text" class="searchTerm" placeholder="Search For a Doctor">
+            <button type="submit" class="searchButton"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+    
+    <br>
+
+    <div class="first-flex-container">
+        <div class="docCount">
+            Number of doctors registered in the system
+            <br><br>
+            <div class="count-up" data-value="97">0</div>
+            <div class="SeeDocLink">See all doctors<span class="arrow arrow-right"></span></div>
+        </div>
+        
+        <div class="diseasesCount">
+            Number of diseases in the system
+            <br><br>
+            <div class="count-up" data-value="17">0</div>
+            <div class="SeeDiseaseLink">See all diseases<span class="arrow arrow-right"></span></div>
+        </div>   
+    </div>
+
+    <div class="second-flex-container">
+        Add something new <br> into the system
+
+        <figure class="AddTiles">
+            <img src="Tile1.jpg">
+            <figcaption>
+              <p>Please add doctor details carefully to the system. Click the link below</p><a href="#" class="read-more">Add Doctor</a>
+            </figcaption>
+        </figure>
+        
+        <figure class="AddTiles">
+            <img src="Title2.jpg">
+            <figcaption>
+              <p>Please add diease details carefully to the system. Click the link below</p><a href="#" class="read-more">Add Disease</a>
+            </figcaption>
+        </figure>
+    </div>
+    
+
+    <footer>
+        <h6>© 2023 · Doctain · All rights reserved</h6>
+    </footer>
+    
+</body>
+</html>
