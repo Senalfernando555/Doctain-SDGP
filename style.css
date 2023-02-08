@@ -1,0 +1,225 @@
+:root{
+    --grey:#9c9f9c;
+    --green:#0d8d18;
+    --darkgreen:#12b100;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    justify-items: center;
+}
+
+body{
+    overflow-x: hidden;
+    background: url("images/background.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    transition: 0.5s;
+    align-content: center;
+}
+
+.form{
+    background-color: #ffffff80;
+    border-radius: 20px;
+    padding: 50px 50px 50px 50px;
+    margin: 10%;
+    margin-top: 100px;
+    width: 75%;
+    transition: 0.3s;
+}
+
+.form1{    
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.form:hover{
+    transition: 0.3s;
+    box-shadow: 0 1px 20px 0.1px rgba(0, 0, 0, 0.058);
+}
+
+.textbox{
+    border-color: rgba(0, 62, 0, 0.507);
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.textbox:hover{
+    transition: 0.3s;
+    border-radius: 0px;
+}
+
+h1{
+    display: flex;
+    color: var(--green);
+}
+
+.choose{
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btns{
+    justify-content: center;
+}
+
+h5{
+    color: var(--grey);
+    margin-right: 20%;
+}
+
+.link{
+    text-decoration: none;
+    color: var(--green);
+    
+}
+
+.link:hover{
+    text-decoration: none;
+    color: var(--darkgreen);
+    
+}
+
+.headding{
+    color: var(--green);
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.div{
+    display: flex;
+    padding-top: 5px;
+    min-width: 400px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.logo{
+    height: 150px;
+    padding: 20px;
+    position: fixed;
+}
+
+.img{
+    max-width: 150px;
+    max-height: 150px;
+    min-width: 100px;
+    min-height: 100px;
+}
+
+.inputs{
+    display:grid ;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 20px 0 20px 0;
+    max-width: 410px;
+    padding: 5px;
+}
+
+.imageBtns .admin{
+    display: inline-flex;
+    border: 2px solid var(--grey);
+    border-radius: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.imageBtns .adminChecked{
+    display: inline-flex;
+    border: 4px solid var(--darkgreen);
+    border-radius: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.imageBtns .admin :hover{
+    border: 4px solid var(--green);
+    border-radius: 15px;
+}
+
+.imageBtns .admin .active{
+    border: 4px solid var(--darkgreen);
+    border-radius: 15px;
+}
+
+.imageBtns .patient{
+    display: inline-flex;
+    border: 2px solid var(--grey);
+    border-radius: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.imageBtns .patientChecked{
+    display: inline-flex;
+    border: 4px solid var(--darkgreen);
+    border-radius: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.imageBtns .patient :hover{
+    border: 4px solid var(--green);
+    border-radius: 15px;
+}
+
+.imageBtns .patient .active{
+    border: 4px solid var(--darkgreen);
+    border-radius: 15px;
+}
+
+.text{
+    color: rgba(0, 53, 9, 0.5);
+}
+
+.btn{
+    background-color: var(--green);
+    color: white;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    background-color: var(--darkgreen);
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+
+
+@media (max-width:750px){
+
+    .choose{
+        justify-content: flex-start;
+    }
+
+    .form1{
+        justify-content: flex-start;
+    }
+
+    .inputs{
+        justify-content: flex-start;
+    }
+
+    h5{
+        margin: none;
+        margin-left: 40px;
+        display: inline-block;
+        justify-content: center;
+    }
+
+    .btns{
+        display: grid;
+        grid-template-columns:200px;
+        grid-template-rows:100px;
+        justify-content: flex-start;
+    }
+}
