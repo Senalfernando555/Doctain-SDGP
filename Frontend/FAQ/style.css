@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:ital@1&display=swap');
+
+body{
+    background-color: #cfe2e8;
+    margin: 0;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;   
+}
+
+nav{
+    display: block;
+    margin: 2% auto auto;
+    width: 95%;
+}
+ul {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    margin: 5px 0 0;
+    padding: 0;
+    overflow: hidden;
+    /*background-color: #333;*/
+    justify-content: space-between;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.reg-button a:hover:not(.active){
+    color: white;
+}
+
+li a:hover:not(.active) {
+    color: dodgerblue;
+}
+
+.reg-button{
+    background-color: dodgerblue;
+    border-radius: 10px;
+}
+
+.active {
+    border-bottom: 4px solid dodgerblue;
+    border-radius: 2px;
+    /*background-color: #04AA6D;*/
+}
+/*
+footer{
+    width: 100%;
+    text-align: center;
+    background-color: dodgerblue;
+    position: absolute;
+    bottom: 0;
+    padding: 1px;
+}
+
+footer > h6 {
+    background-color: dodgerblue;
+}
+*/
+.container-fluid {
+    width: 55%;
+    margin: 0 auto;
+    margin-top: 50px; /* gap between nav and h2*/
+}
+
+h2 {
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(24, 27, 30);
+    font-size: 48px;
+    position: relative;
+    width: 40rem;
+    padding-bottom: 10px;
+}
+
+.searchbar{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin: auto;
+    background-color: whitesmoke;
+    width: 30%;
+    border-radius: 50px;
+    height: 30px;
+    border: 2px solid dodgerblue;
+    padding: 5px;
+
+}
+.accordion {
+    padding: 0 20px;
+    width: 100%;
+    border: 2px solid dodgerblue;
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+   /* background-color: rgb(115, 197, 236); */
+}
+
+
+.accordion h5 {
+    font-size: 22px;
+    margin: 0;
+    padding: 3px 0 0 0;
+    font-weight: normal;
+    color: rgb(7, 41, 89);
+}
+
+.panel {
+    padding: 0 15px;
+    margin-left: 25px;
+    border-left: 1px solid rgb(19, 51, 11);
+    font-size: 18px;
+    text-align: justify;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all .5s ease-in;
+}
+
+.panel p {
+    color: rgb(7, 7, 72);
+}
+
+
+.searchInput{
+    margin-left: 10px;
+    height: 100%;
+    width: 80%;
+    background: none;
+    border: none;
+}
+
+.searchButton{
+    margin-top: 2px;
+    height: 90%;
+    width: 8%;
+    background-color: dodgerblue;
+    border-radius: 100px;
+    /*margin-right: 15px;*/
+    float: right;
+    border: none;
+}
+
+.fa-search{
+    color: white;
+    background: none;
+}
