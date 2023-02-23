@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserProfile</title>
+    <link rel="stylesheet" href="Bookmarks.css">
+</head>
+<body>
+    <nav>
+        <ul>
+        <div>
+        <li><img src="logo.png" style="height: 60px" alt=""></li>
+        </div>
+        <div>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">SERVICE</a></li>
+        <li><a class="active" href="/faq.html">FAQ</a></li>
+        <li><a href="#">CONTACT</a></li>
+        </div>
+        <div>
+        <li><a href="#">LOGIN</a></li>
+        <li><a href="#" class="reg-button">REGISTER</a></li>
+        <li><a href="#"><i class="fa-solid fa-gear"></i></a></li>
+        </div>
+        </ul>
+    </nav>
+
+    <h1>Bookmarks</h1>
+
+    <div id="doctor-info">
+        <h2>Dr. A. Silva</h2>
+        <p>Specialization: Cardiology</p>
+    </div>
+
+    <script>
+        var doctorInfo = document.getElementById("doctor-info");
+        doctorInfo.addEventListener("click", function() {
+            window.location.href = "doctor.html";
+        });
+    </script>
+    </body>
+    </html>
