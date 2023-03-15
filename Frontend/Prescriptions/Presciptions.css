@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:ital@1&display=swap');
+
+body{
+    background-image: url(../images/manugi/19876.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;   
+}
+
+nav{
+    display: block;
+    margin: 2% auto auto;
+    width: 95%;
+}
+ul {
+    display: flex;
+    width: 100%;
+    list-style-type: none;
+    margin: 5px 0 0;
+    padding: 0;
+    overflow: hidden;
+    /*background-color: #333;*/
+    justify-content: space-between;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.reg-button a:hover:not(.active){
+    color: white;
+}
+
+li a:hover:not(.active) {
+    color: dodgerblue;
+}
+
+.reg-button{
+    background-color: dodgerblue;
+    border-radius: 10px;
+}
+
+.active {
+    border-bottom: 4px solid dodgerblue;
+    border-radius: 2px;
+    /*background-color: #04AA6D;*/
+}
+
+h2 {
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(24, 27, 30);
+    font-size: 48px;
+    position: relative;
+    width: 40rem;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+#image-form {
+    margin-left: 20px;
+    font-size: large;
+    color: rgb(24, 24, 54);
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+}
+
+
+
+#preview{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgb(16, 13, 13);
+    margin-top: -15px;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+  }
+  #preview img{
+    width: 50%;
+    height: 50%;
+  }

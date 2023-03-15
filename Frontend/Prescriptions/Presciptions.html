@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescriptions</title>
+    <link rel="stylesheet" href="../static/css/Presciptions.css">
+</head>
+<body>
+    <nav>
+        <ul>
+        <div>
+        <li><img src="../static/images/logo.png" style="height: 60px" alt=""></li>
+        </div>
+        <div>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">SERVICE</a></li>
+        <li><a class="#">FAQ</a></li>
+        <li><a href="#">CONTACT</a></li>
+        </div>
+        <div>
+        <li><a href="#">LOGIN</a></li>
+        <li><a href="#" class="reg-button">REGISTER</a></li>
+        <li><a href="#"><i class="fa-solid fa-gear"></i></a></li>
+        </div>
+        </ul>
+    </nav>
+
+    <h2>Save Your Prescriptions Here!</h2>
+
+
+    <form id="image-form">
+        <input type="file" id="image-input" name="image">
+        <button type="submit">Upload</button>
+      </form> 
+
+      <script>
+      $(document).ready(function() {
+        $('#image-form').submit(function(event) {
+          event.preventDefault(); // prevent the form from submitting normally
+          
+          var formData = new FormData();
+          var fileInput = $('#image-input')[0];
+          formData.append('image', fileInput.files[0]);
+    
+          $.ajax({
+            url: '/upload',
+            method: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+              console.log(response);
+            },
+            error: function(error) {
+              console.log(error);
+            }
+          });
+        });
+      });
+      </script>
+    </body>
+  </html>
+  
