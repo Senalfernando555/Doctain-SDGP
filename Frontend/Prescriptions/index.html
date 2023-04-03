@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Save Your Prescriptions Here!</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" /> 
+<link rel="stylesheet" href="../static/css/Presciptions.css"> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+            src="https://kit.fontawesome.com/10446019b7.js"
+            crossorigin="anonymous"
+    ></script>
+
+</head>
+<body>
+    <nav>
+        <ul>
+        <div>
+        <li><img src="../static/images/logo.png" style="height: 60px" alt=""></li>
+        </div>
+        <div>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">SERVICE</a></li>
+        <li><a class="#">FAQ</a></li>
+        <li><a href="#">CONTACT</a></li>
+        </div>
+        <div>
+        <li><a href="#">LOGIN</a></li>
+        <li><a href="#" class="reg-button">REGISTER</a></li>
+        <li><a href="#"><i class="fa-regular fa-circle-user fa-2xl"></i></a></li>
+        </div>
+        </ul>
+    </nav>
+
+<div class="container">
+<h2>Save Your Prescriptions Here!</h2>
+    <div class="row">
+        <div class="col-lg-12">
+            <p>
+                {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                 {% for message in messages %}
+                   <div class="alert alert-success">
+                    <strong>{{ message }}</strong>
+                  </div>
+                 {% endfor %}
+                  {% endif %}
+                {% endwith %}
+               </p>
+  <div>
+   <!-- File upload form -->
+   <form method="post" action="/upload" enctype="multipart/form-data" class="form-inline">
+    <div class="form-group">
+                      <label>Choose Images: </label>
+                      <input type="file" name="files[]" id="fileInput" class="form-control" multiple >
+                 </div>
+                 <input type="submit" name="submit" class="btn btn-success" value="UPLOAD"/>
+             </form>
+  </div>
+  </div>
+ </div>
+</div>
+<script>
+$(document).ready(function(){
+ // File type validation
+    $("#fileInput").change(function(){
+        var fileLength = this.files.length;
+        var match= ["image/jpeg","image/png","image/jpg","image/gif"];
+        var i;
+        for(i = 0; i < fileLength; i++){ 
+            var file = this.files[i];
+            var imagefile = file.type;
+            if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2]) || (imagefile==match[3]))){
+                alert('Please select a valid image file (JPEG/JPG/PNG/GIF).');
+                $("#fileInput").val('');
+                return false;
+            }
+        }
+    });
+});
+</script>
+</body>
+</html>
